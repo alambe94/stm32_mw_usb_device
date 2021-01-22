@@ -313,9 +313,9 @@ __ALIGN_BEGIN static uint8_t  USBD_CDC_RNDIS_CfgFSDesc[] __ALIGN_END =
 
   /*---------------------------------------------------------------------------*/
   /* IAD descriptor */
-  0x08,                                        /* bLength */
-  0x0B,                                        /* bDescriptorType */
-  0x00,                                        /* bFirstInterface */
+  USB_IAD_DESC_SIZE,                           /* bLength */
+  USB_DESC_TYPE_IAD,                           /* bDescriptorType */
+  CDC_RNDIS_CMD_ITF_NBR,                       /* bFirstInterface */
   0x02,                                        /* bInterfaceCount */
   0xE0,                                        /* bFunctionClass (Wireless Controller) */
   0x01,                                        /* bFunctionSubClass */
