@@ -297,7 +297,7 @@ __ALIGN_BEGIN static uint8_t USBD_VIDEO_CfgDesc[] __ALIGN_END =
   UVC_IN_EP,                                     /* bEndpointAddress */
   0x05,                                          /* bmAttributes: ISO transfer */
   LOBYTE(UVC_ISO_FS_MPS),                        /* wMaxPacketSize */
-  LOBYTE(UVC_ISO_FS_MPS),
+  HIBYTE(UVC_ISO_FS_MPS),
   0x01,                                          /* bInterval: 1 frame interval */
 };
 
@@ -711,7 +711,7 @@ static void VIDEO_REQ_GetCurrent(USBD_HandleTypeDef *pdev, USBD_SetupReqTypedef 
   (void) USBD_memset(hVIDEO->control.data, 0, USB_MAX_EP0_SIZE);
 
   /* Manage Video Control interface requests */
-  if (LOBYTE(req->wIndex) == 0x00U)
+  if (LOBYTE(req->wIndex) == UVC_VC_IF_NUM)
   {
     if (HIBYTE(req->wValue) == 0x02U)
     {

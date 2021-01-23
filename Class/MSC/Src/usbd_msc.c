@@ -141,7 +141,7 @@ __ALIGN_BEGIN static uint8_t USBD_MSC_CfgHSDesc[USB_MSC_CONFIG_DESC_SIZ]  __ALIG
   /********************  Mass Storage interface ********************/
   0x09,                                            /* bLength: Interface Descriptor size */
   0x04,                                            /* bDescriptorType: */
-  0x00,                                            /* bInterfaceNumber: Number of Interface */
+  MSC_ITF_NBR,                                     /* bInterfaceNumber: Number of Interface */
   0x00,                                            /* bAlternateSetting: Alternate setting */
   0x02,                                            /* bNumEndpoints */
   0x08,                                            /* bInterfaceClass: MSC Class */
@@ -188,7 +188,7 @@ __ALIGN_BEGIN static uint8_t USBD_MSC_CfgFSDesc[USB_MSC_CONFIG_DESC_SIZ]  __ALIG
   /********************  Mass Storage interface ********************/
   0x09,                                            /* bLength: Interface Descriptor size */
   0x04,                                            /* bDescriptorType: */
-  0x00,                                            /* bInterfaceNumber: Number of Interface */
+  MSC_ITF_NBR,                                     /* bInterfaceNumber: Number of Interface */
   0x00,                                            /* bAlternateSetting: Alternate setting */
   0x02,                                            /* bNumEndpoints*/
   0x08,                                            /* bInterfaceClass: MSC Class */
@@ -233,7 +233,7 @@ __ALIGN_BEGIN static uint8_t USBD_MSC_OtherSpeedCfgDesc[USB_MSC_CONFIG_DESC_SIZ]
   /********************  Mass Storage interface ********************/
   0x09,                                           /* bLength: Interface Descriptor size */
   0x04,                                           /* bDescriptorType: */
-  0x00,                                           /* bInterfaceNumber: Number of Interface */
+  MSC_ITF_NBR,                                    /* bInterfaceNumber: Number of Interface */
   0x00,                                           /* bAlternateSetting: Alternate setting */
   0x02,                                           /* bNumEndpoints */
   0x08,                                           /* bInterfaceClass: MSC Class */

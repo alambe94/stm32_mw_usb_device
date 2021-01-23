@@ -59,6 +59,8 @@ extern "C" {
 #define MSC_EPIN_ADDR                0x81U
 #define MSC_EPOUT_ADDR               0x01U
 
+#define MSC_ITF_NBR                  0x00
+
 /**
   * @}
   */
