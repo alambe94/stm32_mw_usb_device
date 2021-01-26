@@ -217,7 +217,7 @@ __ALIGN_BEGIN static uint8_t USBD_AUDIO_CfgDesc[USB_AUDIO_CONFIG_DESC_SIZ] __ALI
   0x01,                                 /* bSourceID */
   0x01,                                 /* bControlSize */
   AUDIO_CONTROL_MUTE,                   /* bmaControls(0) */
-  0,                                    /* bmaControls(1) */
+  0x00,                                 /* bmaControls(1) */
   0x00,                                 /* iTerminal */
   /* 09 byte*/
 

@@ -170,7 +170,7 @@ __ALIGN_BEGIN static uint8_t USBD_CDC_ECM_CfgHSDesc[] __ALIGN_END =
   /* IAD descriptor */
   0x08,                                     /* bLength */
   0x0B,                                     /* bDescriptorType */
-  0x00,                                     /* bFirstInterface */
+  CDC_ECM_CMD_ITF_NBR,                      /* bFirstInterface */
   0x02,                                     /* bInterfaceCount */
   0x02,                                     /* bFunctionClass (Wireless Controller) */
   0x06,                                     /* bFunctionSubClass */
@@ -214,8 +214,8 @@ __ALIGN_BEGIN static uint8_t USBD_CDC_ECM_CfgHSDesc[] __ALIGN_END =
   0x05,                                     /* bFunctionLength */
   0x24,                                     /* bDescriptorType: CS_INTERFACE */
   0x06,                                     /* bDescriptorSubtype: Union functional descriptor */
-  0x00,                                     /* bMasterInterface: Communication class interface */
-  0x01,                                     /* bSlaveInterface0: Data Class Interface */
+  CDC_ECM_CMD_ITF_NBR,                      /* bMasterInterface: Communication class interface */
+  CDC_ECM_COM_ITF_NBR,                      /* bSlaveInterface0: Data Class Interface */
 
   /* Communication Endpoint Descriptor */
   0x07,                                     /* bLength: Endpoint Descriptor size */
@@ -281,7 +281,7 @@ __ALIGN_BEGIN static uint8_t USBD_CDC_ECM_CfgFSDesc[] __ALIGN_END =
   /* IAD descriptor */
   0x08,                                     /* bLength */
   0x0B,                                     /* bDescriptorType */
-  0x00,                                     /* bFirstInterface */
+  CDC_ECM_CMD_ITF_NBR,                      /* bFirstInterface */
   0x02,                                     /* bInterfaceCount */
   0x02,                                     /* bFunctionClass (Wireless Controller) */
   0x06,                                     /* bFunctionSubClass */
@@ -391,7 +391,7 @@ __ALIGN_BEGIN static uint8_t USBD_CDC_ECM_OtherSpeedCfgDesc[] __ALIGN_END =
   /* IAD descriptor */
   0x08,                                     /* bLength */
   0x0B,                                     /* bDescriptorType */
-  0x00,                                     /* bFirstInterface */
+  CDC_ECM_CMD_ITF_NBR,                      /* bFirstInterface */
   0x02,                                     /* bInterfaceCount */
   0x02,                                     /* bFunctionClass (Wireless Controller) */
   0x06,                                     /* bFunctionSubClass */
@@ -401,7 +401,7 @@ __ALIGN_BEGIN static uint8_t USBD_CDC_ECM_OtherSpeedCfgDesc[] __ALIGN_END =
   /* Interface Descriptor */
   0x09,                                     /* bLength: Interface Descriptor size */
   USB_DESC_TYPE_INTERFACE,                  /* bDescriptorType: Interface descriptor type */
-  0x00,                                     /* bInterfaceNumber: Number of Interface */
+  CDC_ECM_CMD_ITF_NBR,                      /* bInterfaceNumber: Number of Interface */
   0x00,                                     /* bAlternateSetting: Alternate setting */
   0x01,                                     /* bNumEndpoints: One endpoint used */
   0x02,                                     /* bInterfaceClass: Communication Interface Class */
@@ -435,8 +435,8 @@ __ALIGN_BEGIN static uint8_t USBD_CDC_ECM_OtherSpeedCfgDesc[] __ALIGN_END =
   0x05,                                     /* bFunctionLength */
   0x24,                                     /* bDescriptorType: CS_INTERFACE */
   0x06,                                     /* bDescriptorSubtype: Union functional descriptor */
-  0x00,                                     /* bMasterInterface: Communication class interface */
-  0x01,                                     /* bSlaveInterface0: Data Class Interface */
+  CDC_ECM_CMD_ITF_NBR,                      /* bMasterInterface: Communication class interface */
+  CDC_ECM_COM_ITF_NBR,                      /* bSlaveInterface0: Data Class Interface */
 
   /* Communication Endpoint Descriptor */
   0x07,                                     /* bLength: Endpoint Descriptor size */
@@ -452,7 +452,7 @@ __ALIGN_BEGIN static uint8_t USBD_CDC_ECM_OtherSpeedCfgDesc[] __ALIGN_END =
   /* Data class interface descriptor */
   0x09,                                     /* bLength: Endpoint Descriptor size */
   USB_DESC_TYPE_INTERFACE,                  /* bDescriptorType: */
-  0x01,                                     /* bInterfaceNumber: Number of Interface */
+  CDC_ECM_COM_ITF_NBR,                      /* bInterfaceNumber: Number of Interface */
   0x00,                                     /* bAlternateSetting: Alternate setting */
   0x02,                                     /* bNumEndpoints: Two endpoints used */
   0x0A,                                     /* bInterfaceClass: CDC */

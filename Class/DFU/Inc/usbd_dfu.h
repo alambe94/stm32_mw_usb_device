@@ -41,6 +41,9 @@ extern "C" {
 /** @defgroup USBD_DFU_Exported_Defines
   * @{
   */
+
+#define DFU_ITF_NBR                     0x00
+
 #ifndef USBD_DFU_MAX_ITF_NUM
 #define USBD_DFU_MAX_ITF_NUM            1U
 #endif /* USBD_DFU_MAX_ITF_NUM */
@@ -135,8 +138,8 @@ typedef  void (*pFunction)(void);
 /**********  Descriptor of DFU interface 0 Alternate setting n ****************/
 #define USBD_DFU_IF_DESC(n)           0x09,   /* bLength: Interface Descriptor size */ \
                                       USB_DESC_TYPE_INTERFACE,   /* bDescriptorType */ \
-                                      0x00,   /* bInterfaceNumber: Number of Interface */ \
-                                      (n),      /* bAlternateSetting: Alternate setting */ \
+                                      DFU_ITF_NBR,   /* bInterfaceNumber: Number of Interface */ \
+                                      (n),    /* bAlternateSetting: Alternate setting */ \
                                       0x00,   /* bNumEndpoints*/ \
                                       0xFE,   /* bInterfaceClass: Application Specific Class Code */ \
                                       0x01,   /* bInterfaceSubClass : Device Firmware Upgrade Code */ \
