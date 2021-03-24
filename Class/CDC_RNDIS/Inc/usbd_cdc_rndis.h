@@ -69,7 +69,7 @@ extern "C" {
 #define CDC_RNDIS_DATA_FS_MAX_PACKET_SIZE                 64U   /* Endpoint IN & OUT Packet size */
 #define CDC_RNDIS_CMD_PACKET_SIZE                         16U   /* Control Endpoint Packet size */
 
-#define CDC_RNDIS_CONFIG_DESC_SIZ                         75U
+#define CDC_RNDIS_CONFIG_DESC_SIZE                        75U
 #define CDC_RNDIS_DATA_HS_IN_PACKET_SIZE                  CDC_RNDIS_DATA_HS_MAX_PACKET_SIZE
 #define CDC_RNDIS_DATA_HS_OUT_PACKET_SIZE                 CDC_RNDIS_DATA_HS_MAX_PACKET_SIZE
 
@@ -243,7 +243,7 @@ typedef struct
 
 typedef struct
 {
-  uint32_t        data[2000 / 4]; /* Force 32bits alignment */
+  uint32_t        data[CDC_RNDIS_MAX_DATA_SZE / 4U]; /* Force 32-bit alignment */
   uint8_t         CmdOpCode;
   uint8_t         CmdLength;
   uint8_t         ResponseRdy;     /* Indicates if the Device Response to an CDC_RNDIS msg is ready */
